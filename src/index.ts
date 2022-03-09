@@ -17,8 +17,6 @@ const main = async () => {
 
   const templatePath = path.join(__dirname, "templates/node/", template);
   const targetPath = path.join(CURR_DIR, projectName);
-  console.log(`templatePath: ${templatePath}`);
-  console.log(`targetPath: ${targetPath}`);
   const options: CliOptions = {
     projectName,
     templateName: template,
@@ -29,8 +27,6 @@ const main = async () => {
   if (!createProject(targetPath)) {
     return;
   }
-  console.log(`template path: ${templatePath}`);
-  console.log(`projectName: ${projectName}`);
   await createDirContent(templatePath, projectName);
 
   postProcess(options, packageManager);

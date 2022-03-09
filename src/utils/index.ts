@@ -19,7 +19,6 @@ export const createProject = (projectPath: string) => {
     return false;
   }
   fse.mkdirSync(projectPath);
-  console.log(`created dir at ${projectPath}`);
   return true;
 };
 
